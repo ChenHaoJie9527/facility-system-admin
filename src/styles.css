@@ -30,27 +30,7 @@ code {
 /* 中等桌面屏幕 (1366px - 1920px) */
 @media (max-width: 1920px) and (min-width: 1366px) {
   :root {
-    font-size: 14px;
-  }
-}
-
-/* 小型桌面屏幕 (< 1366px) - 切换到固定单位 */
-@media (max-width: 1365px) {
-  .header {
-    padding: 12px;
-  }
-  
-  .sidebar {
-    width: 280px;
-  }
-  
-  .header-title {
-    font-size: 18px;
-  }
-  
-  .nav-link {
-    font-size: 13px;
-    padding: 10px;
+    font-size: 16px;
   }
 }
 
@@ -58,21 +38,6 @@ code {
 @media (min-width: 2561px) {
   body {
     font-size: 18px;
-  }
-  
-  .container {
-    max-width: 2560px;
-  }
-}
-
-/* 平板适配 (768px - 1365px) */
-@media (max-width: 1365px) and (min-width: 768px) {
-  .sidebar {
-    width: 260px;
-  }
-  
-  .header-title {
-    font-size: 16px;
   }
 }
 
