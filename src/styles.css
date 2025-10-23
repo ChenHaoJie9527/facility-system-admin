@@ -1,0 +1,114 @@
+
+@layer reset, antd;
+
+@import "the-new-css-reset/css/reset.css" layer(reset);
+
+:root {
+  --design-width: 1920px;
+  --min-width: 1366px;
+  --max-width: 2560px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: var(--min-width);
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+/* ==================== 响应式断点 ==================== */
+
+/* 中等桌面屏幕 (1366px - 1920px) */
+@media (max-width: 1920px) and (min-width: 1366px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* 小型桌面屏幕 (< 1366px) - 切换到固定单位 */
+@media (max-width: 1365px) {
+  .header {
+    padding: 12px;
+  }
+  
+  .sidebar {
+    width: 280px;
+  }
+  
+  .header-title {
+    font-size: 18px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+/* 超大屏幕 (> 2560px) - 限制最大尺寸 */
+@media (min-width: 2561px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .container {
+    max-width: 2560px;
+  }
+}
+
+/* 平板适配 (768px - 1365px) */
+@media (max-width: 1365px) and (min-width: 768px) {
+  .sidebar {
+    width: 260px;
+  }
+  
+  .header-title {
+    font-size: 16px;
+  }
+}
+
+
+/* ==================== 工具类 ==================== */
+
+/* 间距工具类（会被 PostCSS 转换） */
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.mb-4 { margin-bottom: 32px; }
+
+.p-1 { padding: 8px; }
+.p-2 { padding: 16px; }
+.p-3 { padding: 24px; }
+.p-4 { padding: 32px; }
+
+/* 字体大小工具类 */
+.text-xs { font-size: clamp(10px, 0.625vw, 12px); }
+.text-sm { font-size: clamp(12px, 0.729vw, 14px); }
+.text-base { font-size: clamp(14px, 0.833vw, 16px); }
+.text-lg { font-size: clamp(16px, 1.042vw, 20px); }
+.text-xl { font-size: clamp(20px, 1.25vw, 24px); }
+.text-2xl { font-size: clamp(24px, 1.563vw, 30px); }
+
+/* 保持固定尺寸的类（不被转换） */
+.ignore-vw {
+  /* 添加此类的元素不会被转换为 vw */
+}
+
+/* Ant Design 覆盖（保持原样） */
+.ant-btn {
+  /* Ant Design 组件保持原有尺寸 */
+}
